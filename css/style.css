@@ -1,0 +1,134 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body
+{
+    background-image: url("3.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box
+{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.box1
+{
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 .inner
+{
+    transition: all 1s;
+    height: 6px;
+    background-color: rgb(255, 255, 255,.5);
+    border-radius: 20px;
+    width: 40px;
+}
+.inner::after,
+.inner::before
+{
+    content: "";
+    border-radius: 10px;
+    width: 40px;
+    height: 6px;
+    background-color: rgb(255, 255, 255,.5);
+    position: absolute;
+    transition: all .5s ease-in-out;
+}
+.inner::after
+{
+    transform: translateY(-12px);
+}
+.inner::before
+{
+    transform: translateY(12px);
+}
+
+.box .open .inner 
+{
+    transform: translateX(-50px);
+    background-color: transparent;
+}
+.box .open .inner::after
+{
+    transform: rotate(45deg) translate(35px, -35px);
+    background-color: rgb(255, 0, 0,.9);
+}
+.box .open .inner::before
+{
+    transform: rotate(135deg) translate(-35px, -35px);
+    background-color: rgb(255, 0, 0,.9);
+}
+.text
+{
+    transition: all .5s ease-in-out;
+    transform: translateX(-300px);
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    height: 100vh;
+    width: 120px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.59) 0%, rgba(255,255,255,0.5886729691876751) 100%);
+    border-bottom-right-radius: 290px;
+    border-top-right-radius: 290px;
+    display: flex;
+    align-items: center;
+}
+.text ul a li
+{
+    list-style-type: none;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    border-bottom-right-radius: 23px;
+    border-top-right-radius: 23px;
+}
+.text ul a li:hover
+{
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.59) 0%, rgba(0,0,0,0.5886729691876751) 100%);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.text ul a
+{
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 10px white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dead
+{
+    transition: all .5s ease-in-out;
+    transform: translateX(0px);
+}
+
+.btn
+{
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 23px;
+    border: none;
+    color: white;
+    background-color: coral;
+    transition: all .5s ease-in-out;
+}
+.btn:hover
+{
+    background-color: tomato;
+    color: rgb(0, 0, 0);
+}

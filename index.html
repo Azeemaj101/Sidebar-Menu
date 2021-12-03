@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Bar</title>
+    <link rel = "icon" href = "/css/title_1.png" 
+        type = "image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="box">
+    <div class="box1">
+        <div class="inner"></div>
+    </div>
+    </div>
+    <div class="text">
+        <ul>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><li>Home</li></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><li>About</li></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><li>Contact Us</li></a>
+        </ul>
+    </div>
+    <div style="color: aliceblue;">
+        Start Your Code... <a href="http://azeemaj101.herokuapp.com" target="_blank" rel="noopener noreferrer"><button class="btn">Portfolio</button></a>
+    </div>
+    <script>
+        const manu_open = document.getElementsByClassName('box1')[0];
+        const text = document.getElementsByClassName("text")[0];
+        let check = false;
+        manu_open.addEventListener('click',()=>
+        {
+            if(!check)
+            {
+                manu_open.classList.add("open");
+                check = true;
+                // text.style.display = "block";
+                text.classList.add("dead");
+            }
+            else{
+                manu_open.classList.remove("open");
+                text.classList.remove("dead");
+                check=false;
+            }
+        }) 
+    </script>
+</body>
+</html>
